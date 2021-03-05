@@ -121,7 +121,7 @@ h3 {
 }
 
 .bullets button::after {
-  position: relative;
+  position: absolute;
   top: 0;
   left: -150px;
   content: '';
@@ -146,7 +146,7 @@ h3 {
   height: 60rem;
   background-image: url("../../img/Activity.svg"), url("../../img/Arrow.svg"), url("../../img/Circle.svg"), url("../../img/Graph.svg"), url("../../img/Dots.svg"), url("../../img/Stripes.svg");
   background-repeat: no-repeat;
-  background-position: 50% 105%, 9% 95%, 83% -4%, 0 30%, 22% 86%, 0 45%;
+  background-position: 50% 110%, 9% 95%, 83% -4%, 0 30%, 22% 86%, 0 45%;
 }
 
 @media (max-width: 768px) {
