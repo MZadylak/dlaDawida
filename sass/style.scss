@@ -1,0 +1,210 @@
+@import url("https://use.typekit.net/gvg5pyq.css");
+@import './colors';
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: lato, sans-serif;
+    color: $main-color;
+    background-color: $bg-color;
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+.header {
+    margin-top: 9rem;
+
+    &__title {
+        display: inline-block;
+        font-size: 4rem;
+        margin-bottom: 3rem;
+    }
+
+    &__text {
+        font-size: 2.1rem;
+        font-weight: 300;
+    }
+}
+
+.bullets {
+    margin-top: 6rem;
+
+    &__list {
+        padding: 0;
+        list-style: none;
+    }
+
+    &__points {
+        background-color: $bullets-color;
+        border: $border-color;
+        border-radius: 8px;
+        margin-bottom: 2.5rem;
+    }
+
+    &__heading {
+        display: flex;
+        align-items: center;
+
+        * {
+            padding: 17px;
+        }
+
+        img {
+            width: 3rem;
+            height: 3rem;
+            padding: 0;
+            margin-left: 2rem;
+        }
+
+        h2 {
+            flex-grow: 1;
+            font-size: 1.6rem;
+            margin-left: 3px;
+        }
+
+        i {
+            font-size: 1.6rem;
+            cursor: pointer;
+            transform: rotate(0deg);
+        }
+
+        i.active {
+            transform: rotate(90deg);
+        }
+    }
+
+    &__text {
+        display: none;
+        font-size: 1.4rem;
+        font-weight: 300;
+        padding: .5rem 2rem 3rem 7rem;
+    }
+
+    &__text.active {
+        display: block;
+    }
+
+
+    button {
+        position: relative;
+        top: 6rem;
+        font-size: 1.6rem;
+        font-weight: 700;
+        color: $text-color;
+        background-color: $button-color;
+        border: 0;
+        border-radius: 8px;
+        padding: 2rem 4rem;
+        margin-left: calc(var(--bs-gutter-x)/ 2);
+        overflow: hidden;
+
+        &::after {
+            position: relative;
+            top: 0;
+            left: -150px;
+            content: '';
+            height: 10rem;
+            width: 10rem;
+            background: $hover-gradient;
+            transform: skew(-15deg);
+            transition: left .5s;
+        }
+
+        &:hover::after {
+            left: 50rem;
+        }
+    }
+}
+
+.image {
+    position: relative;
+    top: 0;
+    left: 9rem;
+    height: 60rem;
+    background-image: url('../../img/Activity.svg'), url('../../img/Arrow.svg'), url('../../img/Circle.svg'), url('../../img/Graph.svg'), url('../../img/Dots.svg'), url('../../img/Stripes.svg');
+    background-repeat: no-repeat;
+    background-position: 50% 105%, 9% 95%, 83% -4%, 0 30%, 22% 86%, 0 45%;
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 55%;
+    }
+
+    .image {
+        position: absolute;
+        top: 20rem;
+        left: 30rem;
+        width: 100%;
+        transform: scale(.7);
+    }
+
+    button {
+        top: 2rem !important;
+    }
+}
+
+@media (max-width: 576px) {
+    html {
+        font-size: 50%;
+    }
+
+    .header {
+        margin-top: 2rem;
+    }
+
+    button {
+        left: 50%;
+        transform: translateX(-50%);
+        margin-left: 0 !important;
+    }
+
+    .image {
+        position: static;
+        background: url('../../img/obrazek.svg');
+        background-position: center 30rem;
+        background-attachment: fixed;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+}
+
+@media (max-width: 576px) {
+    html {
+        font-size: 50%;
+    }
+
+    .header {
+        margin-top: 2rem;
+    }
+
+    button {
+        left: 50%;
+        transform: translateX(-50%);
+        margin-left: 0 !important;
+    }
+
+    .image {
+        position: static;
+        background: url('../../img/obrazek.svg');
+        background-position: center 30rem;
+        background-attachment: fixed;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+}

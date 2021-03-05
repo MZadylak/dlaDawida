@@ -1,0 +1,214 @@
+@import url("https://use.typekit.net/gvg5pyq.css");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: lato, sans-serif;
+  color: #091259;
+  background-color: #F6F8FC;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.header {
+  margin-top: 9rem;
+}
+
+.header__title {
+  display: inline-block;
+  font-size: 4rem;
+  margin-bottom: 3rem;
+}
+
+.header__text {
+  font-size: 2.1rem;
+  font-weight: 300;
+}
+
+.bullets {
+  margin-top: 6rem;
+}
+
+.bullets__list {
+  padding: 0;
+  list-style: none;
+}
+
+.bullets__points {
+  background-color: rgba(255, 255, 255, 0.5);
+  border: #F3F7FC;
+  border-radius: 8px;
+  margin-bottom: 2.5rem;
+}
+
+.bullets__heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.bullets__heading * {
+  padding: 17px;
+}
+
+.bullets__heading img {
+  width: 3rem;
+  height: 3rem;
+  padding: 0;
+  margin-left: 2rem;
+}
+
+.bullets__heading h2 {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  font-size: 1.6rem;
+  margin-left: 3px;
+}
+
+.bullets__heading i {
+  font-size: 1.6rem;
+  cursor: pointer;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+.bullets__heading i.active {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.bullets__text {
+  display: none;
+  font-size: 1.4rem;
+  font-weight: 300;
+  padding: .5rem 2rem 3rem 7rem;
+}
+
+.bullets__text.active {
+  display: block;
+}
+
+.bullets button {
+  position: relative;
+  top: 6rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #FFF;
+  background-color: #E62D35;
+  border: 0;
+  border-radius: 8px;
+  padding: 2rem 4rem;
+  margin-left: calc(var(--bs-gutter-x)/ 2);
+  overflow: hidden;
+}
+
+.bullets button::after {
+  position: relative;
+  top: 0;
+  left: -150px;
+  content: '';
+  height: 10rem;
+  width: 10rem;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0.5)));
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.5) rgba(255, 255, 255, 0.9));
+  -webkit-transform: skew(-15deg);
+          transform: skew(-15deg);
+  -webkit-transition: left .5s;
+  transition: left .5s;
+}
+
+.bullets button:hover::after {
+  left: 50rem;
+}
+
+.image {
+  position: relative;
+  top: 0;
+  left: 9rem;
+  height: 60rem;
+  background-image: url("../../img/Activity.svg"), url("../../img/Arrow.svg"), url("../../img/Circle.svg"), url("../../img/Graph.svg"), url("../../img/Dots.svg"), url("../../img/Stripes.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 105%, 9% 95%, 83% -4%, 0 30%, 22% 86%, 0 45%;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 55%;
+  }
+  .image {
+    position: absolute;
+    top: 20rem;
+    left: 30rem;
+    width: 100%;
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+  }
+  button {
+    top: 2rem !important;
+  }
+}
+
+@media (max-width: 576px) {
+  html {
+    font-size: 50%;
+  }
+  .header {
+    margin-top: 2rem;
+  }
+  button {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    margin-left: 0 !important;
+  }
+  .image {
+    position: static;
+    background: url("../../img/obrazek.svg");
+    background-position: center 30rem;
+    background-attachment: fixed;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
+@media (max-width: 576px) {
+  html {
+    font-size: 50%;
+  }
+  .header {
+    margin-top: 2rem;
+  }
+  button {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    margin-left: 0 !important;
+  }
+  .image {
+    position: static;
+    background: url("../../img/obrazek.svg");
+    background-position: center 30rem;
+    background-attachment: fixed;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+/*# sourceMappingURL=style.css.map */
